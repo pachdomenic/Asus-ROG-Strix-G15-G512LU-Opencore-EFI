@@ -121,6 +121,36 @@
                     <key>TableSignature</key>
                     <data></data>
                 </dict>
+                <dict>
+                    <key>Base</key>
+                    <string></string>
+                    <key>BaseSkip</key>
+                    <integer>0</integer>
+                    <key>Comment</key>
+                    <string>_S3 TO </string>
+                    <key>Count</key>
+                    <integer>0</integer>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Find</key>
+                    <data>X1MzXw==</data>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data></data>
+                    <key>OemTableId</key>
+                    <data></data>
+                    <key>Replace</key>
+                    <data>WFMzXw==</data>
+                    <key>ReplaceMask</key>
+                    <data></data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                    <key>TableLength</key>
+                    <integer>0</integer>
+                    <key>TableSignature</key>
+                    <data></data>
+                </dict>
             </array>
             <key>Quirks</key>
             <dict>
@@ -151,7 +181,7 @@
                 <key>AvoidRuntimeDefrag</key>
                 <true/>
                 <key>DevirtualiseMmio</key>
-                <true/>
+                <false/>
                 <key>DisableSingleUser</key>
                 <false/>
                 <key>DisableVariableWrite</key>
@@ -161,9 +191,7 @@
                 <key>EnableSafeModeSlide</key>
                 <true/>
                 <key>EnableWriteUnprotector</key>
-                <false/>
-                <key>FixupAppleEfiImages</key>
-                <false/>
+                <true/>
                 <key>ForceBooterSignature</key>
                 <false/>
                 <key>ForceExitBootServices</key>
@@ -179,11 +207,11 @@
                 <key>ProvideMaxSlide</key>
                 <integer>0</integer>
                 <key>RebuildAppleMemoryMap</key>
-                <true/>
+                <false/>
                 <key>ResizeAppleGpuBars</key>
                 <integer>-1</integer>
                 <key>SetupVirtualMap</key>
-                <false/>
+                <true/>
                 <key>SignalAppleOS</key>
                 <false/>
                 <key>SyncRuntimePermissions</key>
@@ -216,7 +244,7 @@
                 <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
                 <dict>
                     <key>AAPL,ig-platform-id</key>
-                    <data>CQClPg==</data>
+                    <data>AACbPg==</data>
                     <key>device-id</key>
                     <data>mz4ABg==</data>
                 </dict>
@@ -630,7 +658,7 @@
                     <key>BundlePath</key>
                     <string>CPUFriendDataProvider.kext</string>
                     <key>Comment</key>
-                    <string>V1.0.0</string>
+                    <string>V1.0.1</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -750,8 +778,6 @@
                 <false/>
                 <key>DisableIoMapper</key>
                 <true/>
-                <key>DisableIoMapperMapping</key>
-                <false/>
                 <key>DisableLinkeditJettison</key>
                 <true/>
                 <key>DisableRtcChecksum</key>
@@ -809,8 +835,6 @@
                 <false/>
                 <key>HideAuxiliary</key>
                 <false/>
-                <key>InstanceIdentifier</key>
-                <string></string>
                 <key>LauncherOption</key>
                 <string>Disabled</string>
                 <key>LauncherPath</key>
@@ -942,7 +966,7 @@
                     <key>SystemAudioVolume</key>
                     <data>Rg==</data>
                     <key>boot-args</key>
-                    <string>keepsyms=1 debug=0x100</string>
+                    <string>-v keepsyms=1 debug=0x100 swd_panic=1 revpatch=sbvmm</string>
                     <key>csr-active-config</key>
                     <data>AAAAAA==</data>
                     <key>prev-lang:kbd</key>
@@ -1012,23 +1036,23 @@
                 <key>AdviseFeatures</key>
                 <false/>
                 <key>MLB</key>
-                <string></string>
+                <string>C02016301J900008C</string>
                 <key>MaxBIOSVersion</key>
                 <false/>
                 <key>ProcessorType</key>
                 <integer>0</integer>
                 <key>ROM</key>
-                <data></data>
+                <data>oNeViGwW</data>
                 <key>SpoofVendor</key>
                 <true/>
                 <key>SystemMemoryStatus</key>
                 <string>Auto</string>
                 <key>SystemProductName</key>
-                <string></string>
+                <string>MacBookPro16,4</string>
                 <key>SystemSerialNumber</key>
-                <string></string>
+                <string>C02CL0B1MD6T</string>
                 <key>SystemUUID</key>
-                <string></string>
+                <string>F1EB6874-A598-42D0-AB15-4970882DE869</string>
             </dict>
             <key>UpdateDataHub</key>
             <true/>
@@ -1176,22 +1200,16 @@
             <dict>
                 <key>ClearScreenOnModeSwitch</key>
                 <false/>
-                <key>ConsoleFont</key>
-                <string></string>
                 <key>ConsoleMode</key>
                 <string></string>
                 <key>DirectGopRendering</key>
                 <false/>
                 <key>ForceResolution</key>
                 <false/>
-                <key>GopBurstMode</key>
-                <false/>
                 <key>GopPassThrough</key>
                 <string>Disabled</string>
                 <key>IgnoreTextInGraphics</key>
                 <false/>
-                <key>InitialMode</key>
-                <string>Auto</string>
                 <key>ProvideConsoleGop</key>
                 <true/>
                 <key>ReconnectGraphicsOnConnect</key>
@@ -1247,8 +1265,6 @@
                 <false/>
                 <key>OSInfo</key>
                 <false/>
-                <key>PciIo</key>
-                <false/>
                 <key>UnicodeCollation</key>
                 <false/>
             </dict>
@@ -1278,10 +1294,6 @@
                 <true/>
                 <key>ResizeGpuBars</key>
                 <integer>-1</integer>
-                <key>ResizeUsePciRbIo</key>
-                <false/>
-                <key>ShimRetainProtocol</key>
-                <false/>
                 <key>TscSyncTimeout</key>
                 <integer>0</integer>
                 <key>UnblockFsConnect</key>
